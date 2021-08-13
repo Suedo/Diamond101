@@ -2,7 +2,6 @@
 pragma solidity ^0.7.6;
 pragma experimental ABIEncoderV2;
 
-
 library LibCF {
   bytes32 constant CF_STORAGE_POSITION = keccak256("Crowd.Funding.storage");
 
@@ -30,16 +29,25 @@ library LibCF {
 
 // A crowd funcding facet with deadline
 contract CrowdFundFacet {
-
   modifier inState(LibCF.Status expectedStatus) {
-    LibCF.CFData storage fs = LibCF.getData();    // fs :: facet storage
+    LibCF.CFData storage fs = LibCF.getData(); // fs :: facet storage
     require(fs.status == expectedStatus, "Invalid State");
     _;
   }
 
-  function getTargetAmount() public view returns(uint256) {
+  function getTargetAmount() public view returns (uint256) {
     LibCF.CFData storage fs = LibCF.getData();
     return fs.targetAmount;
+  }
+
+  function getName() public view returns (string memory) {
+    LibCF.CFData storage fs = LibCF.getData();
+    return fs.name;
+  }
+
+  function setName(string memory _newName) public returns (string memory) {
+    LibCF.CFData storage fs = LibCF.getData();
+    fs.name = _newName;
   }
 
   function contribute() public payable inState(LibCF.Status.Ongoing) {

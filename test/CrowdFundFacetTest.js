@@ -49,11 +49,26 @@ contract('CrowdFundFacet Test', async (accounts) => {
     assert.sameMembers(result, selectors)
   })
 
-  it('should test function call', async () => {
+  // These tests are failing. Constructor data not being set
+  it('constructor data should be present', async () => {
     let diamond = await Diamond.deployed();
     let facet = await CrowdFundFacet.at(diamond.address);
     let targetAmt = await facet.getTargetAmount();
-    console.log(targetAmt);
+    let name = await facet.getName();
+
+    console.log(`targetAmt: ${targetAmt}, name : ${name}`);
+    assert.equal(name, "CrowdFundFacet");
+    assert.equal(targetAmt, ONE_ETH)
+  })
+
+  // these pass, setters are doing their job
+  it('setters should set data', async () => {
+    let diamond = await Diamond.deployed();
+    let facet = await CrowdFundFacet.at(diamond.address);
+    const newName = "Test123";
+    await facet.setName(newName)
+    let newNameResult = await facet.getName();
+    console.log(`newName : ${newNameResult}`)
   })
 
 })
