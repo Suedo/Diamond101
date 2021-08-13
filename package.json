@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "prettier": {
-    "printWidth": 150
+    "printWidth": 150,
+    "tabWidth": 2
   },
   "dependencies": {
     "truffle": "^5.1.58"
