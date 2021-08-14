@@ -66,4 +66,23 @@ contract('SimpleTestFacet Test', async (accounts) => {
     console.log(`newName : ${newNameResult}`)
   })
 
+  // these pass, setters are doing their job
+  it('add numbers and see it getting stored', async () => {
+    let diamond = await Diamond.deployed();
+    let facet = await SimpleTestFacet.at(diamond.address);
+    await facet.addNumber(10)
+    await facet.addNumber(20)
+    await facet.addNumber(30)
+    let count = await facet.getCount();
+    console.log(`count: ${count.toNumber()}`)
+    assert.equal(3, count.toNumber())
+
+    let numArr = await facet.getNumbers();
+    let nums = numArr.map((i) => i.toNumber());
+    assert.equal(nums.length, count)
+    assert.sameMembers(nums, [10,20,30])
+
+    // ^^ this is passing : WHY ??? facet storage data getting reset at each deployment ?? 
+  })
+
 })
