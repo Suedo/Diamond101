@@ -29,6 +29,8 @@ library LibCF {
 
 // A crowd funcding facet with deadline
 contract CrowdFundFacet {
+  event CFConsInit(string _contractName, uint256 _targetAmountEth, uint256 _durationInMin, address payable _beneficiary);
+
   modifier inState(LibCF.Status expectedStatus) {
     LibCF.CFData storage fs = LibCF.getData(); // fs :: facet storage
     require(fs.status == expectedStatus, "Invalid State");
@@ -45,7 +47,7 @@ contract CrowdFundFacet {
     return fs.name;
   }
 
-  function setName(string memory _newName) public returns (string memory) {
+  function setName(string memory _newName) public {
     LibCF.CFData storage fs = LibCF.getData();
     fs.name = _newName;
   }
@@ -83,7 +85,7 @@ contract CrowdFundFacet {
     address payable _beneficiary
   ) {
     LibCF.CFData storage fs = LibCF.getData();
-
+    emit CFConsInit(_contractName, _targetAmountEth, _durationInMin, _beneficiary);
     fs.name = _contractName;
     fs.targetAmount = _targetAmountEth * 1 ether; // convert ether to wei, and save as wei
     fs.fundingDeadline = block.timestamp + (_durationInMin * 1 minutes);
