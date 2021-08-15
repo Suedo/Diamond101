@@ -1,0 +1,236 @@
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\facets\SimpleTestFacet.sol
+> Compiling .\contracts\interfaces\IDiamondCut.sol
+> Compiling .\contracts\interfaces\IDiamondLoupe.sol
+> Compiling .\contracts\interfaces\IERC165.sol
+> Compiling .\contracts\interfaces\IERC173.sol
+> Compiling .\contracts\libraries\LibA.sol
+> Compiling .\contracts\libraries\LibDiamond.sol
+> Artifacts written to E:\code\oss\diamond-1\build\contracts
+> Compiled successfully using:
+   - solc: 0.7.6+commit.7338295f.Emscripten.clang
+
+MIGRATION_STATUS:{"status":"preAllMigrations","data":{"dryRun":false,"migrations":[{"file":"E:\\code\\oss\\diamond-1\\migrations\\1_initial_migration.js","number":1,"isFirst":true,"isLast":false,"dryRun":false,"interactive":false},{"file":"E:\\code\\oss\\diamond-1\\migrations\\2_diamond.js","number":2,"isFirst":false,"isLast":false,"dryRun":false,"interactive":false},{"file":"E:\\code\\oss\\diamond-1\\migrations\\3_others.js","number":3,"isFirst":false,"isLast":false,"dryRun":false,"interactive":false},{"file":"E:\\code\\oss\\diamond-1\\migrations\\4_simpleTest.js","number":4,"isFirst":false,"isLast":true,"dryRun":false,"interactive":false}]}}
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      5777
+> Block gas limit: 6721975 (0x6691b7)
+
+MIGRATION_STATUS:{"status":"preMigrate","data":{"file":"1_initial_migration.js","number":1,"isFirst":true,"network":"development","networkId":"5777","blockLimit":"0x6691b7"}}
+
+1_initial_migration.js
+======================
+MIGRATION_STATUS:{"status":"replacing","data":{"contractName":"Migrations","priorAddress":"0xA13b7d720cEC673c44F891d4826DC5862Efc16C0"}}
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0x2ce1f2ae34122a9445c72344406104c88add548091907288f2d582b0f1d29b87
+- Blocks: 0            Seconds: 0
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xDffBda8a785f1E4CbCD8E9cac65AFf90f34C1640
+   > block number:        448
+   > block timestamp:     1629017742
+   > account:             0x5f031D295Fc7406CB949806ba47E82f120f3B170
+   > balance:             96.42147614
+   > gas used:            185368 (0x2d418)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00370736 ETH
+MIGRATION_STATUS:{"status":"deployed","data":{"contract":{"contractName":"Migrations","address":"0xDffBda8a785f1E4CbCD8E9cac65AFf90f34C1640"},"deployed":true,"receipt":{"transactionHash":"0x2ce1f2ae34122a9445c72344406104c88add548091907288f2d582b0f1d29b87","gasUsed":185368},"timestamp":1629017742,"gasPrice":"20","gas":"185368","from":"0x5f031D295Fc7406CB949806ba47E82f120f3B170","value":"0","cost":"0.00370736","balance":"96.42147614"}}
+
+- Saving migration to chain.
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00370736 ETH
+
+MIGRATION_STATUS:{"status":"postMigrate","data":{"number":1,"cost":"0.00370736"}}
+
+MIGRATION_STATUS:{"status":"preMigrate","data":{"file":"2_diamond.js","number":2,"isFirst":false,"network":"development","networkId":"5777","blockLimit":"0x6691b7"}}
+
+2_diamond.js
+============
+MIGRATION_STATUS:{"status":"replacing","data":{"contractName":"Test1Facet","priorAddress":"0xe00036FA21b4d2CfDC49b647a1D6EB3a9d53437F"}}
+
+   Replacing 'Test1Facet'
+   ----------------------
+   > transaction hash:    0x45a9617cf319935fbb55f076c357f16c63832bdd55a7575570e9a24e837c7c2f
+- Blocks: 0            Seconds: 0
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xB0B413C1848d718233fe7126910CDb40260906d8
+   > block number:        450
+   > block timestamp:     1629017743
+   > account:             0x5f031D295Fc7406CB949806ba47E82f120f3B170
+   > balance:             96.41725734
+   > gas used:            168673 (0x292e1)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00337346 ETH
+MIGRATION_STATUS:{"status":"deployed","data":{"contract":{"contractName":"Test1Facet","address":"0xB0B413C1848d718233fe7126910CDb40260906d8"},"deployed":true,"receipt":{"transactionHash":"0x45a9617cf319935fbb55f076c357f16c63832bdd55a7575570e9a24e837c7c2f","gasUsed":168673},"timestamp":1629017743,"gasPrice":"20","gas":"168673","from":"0x5f031D295Fc7406CB949806ba47E82f120f3B170","value":"0","cost":"0.00337346","balance":"96.41725734"}}
+MIGRATION_STATUS:{"status":"replacing","data":{"contractName":"Test2Facet","priorAddress":"0xCF9777C33143C1d1b4378dC78CcEdDCb043B00cA"}}
+
+   Replacing 'Test2Facet'
+   ----------------------
+   > transaction hash:    0xce25bb4890ced05c85f5b403e95c88719d98f2f9ea7fdd5fa9415b308202129a
+- Blocks: 0            Seconds: 0
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xed3A1b6d485f6E4b6A17C838652D17caB1EddfB5
+   > block number:        451
+   > block timestamp:     1629017743
+   > account:             0x5f031D295Fc7406CB949806ba47E82f120f3B170
+   > balance:             96.41430904
+   > gas used:            147415 (0x23fd7)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0029483 ETH
+MIGRATION_STATUS:{"status":"deployed","data":{"contract":{"contractName":"Test2Facet","address":"0xed3A1b6d485f6E4b6A17C838652D17caB1EddfB5"},"deployed":true,"receipt":{"transactionHash":"0xce25bb4890ced05c85f5b403e95c88719d98f2f9ea7fdd5fa9415b308202129a","gasUsed":147415},"timestamp":1629017743,"gasPrice":"20","gas":"147415","from":"0x5f031D295Fc7406CB949806ba47E82f120f3B170","value":"0","cost":"0.0029483","balance":"96.41430904"}}
+MIGRATION_STATUS:{"status":"replacing","data":{"contractName":"DiamondCutFacet","priorAddress":"0x9112fbAa21339e3834fEB9b0aB0d59AfC26b7B10"}}
+
+   Replacing 'DiamondCutFacet'
+   ---------------------------
+   > transaction hash:    0x922506410d581590e13fe5091b7096631a47741f469863ea198ca9c2054dbbbe
+- Blocks: 0            Seconds: 0
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x8D7cDB2b05e67D6F2cbf67f1D89856D82d2f93c0
+   > block number:        452
+   > block timestamp:     1629017744
+   > account:             0x5f031D295Fc7406CB949806ba47E82f120f3B170
+   > balance:             96.3868152
+   > gas used:            1374692 (0x14f9e4)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02749384 ETH
+MIGRATION_STATUS:{"status":"deployed","data":{"contract":{"contractName":"DiamondCutFacet","address":"0x8D7cDB2b05e67D6F2cbf67f1D89856D82d2f93c0"},"deployed":true,"receipt":{"transactionHash":"0x922506410d581590e13fe5091b7096631a47741f469863ea198ca9c2054dbbbe","gasUsed":1374692},"timestamp":1629017744,"gasPrice":"20","gas":"1374692","from":"0x5f031D295Fc7406CB949806ba47E82f120f3B170","value":"0","cost":"0.02749384","balance":"96.3868152"}}
+MIGRATION_STATUS:{"status":"replacing","data":{"contractName":"DiamondLoupeFacet","priorAddress":"0x9a190eD46C22C361a11ecd5DC78D85c2676bA142"}}
+
+   Replacing 'DiamondLoupeFacet'
+   -----------------------------
+   > transaction hash:    0x7fcb984cd91cf90b1a460b513b2e1a7c40dada34a859b434680183465f1a55cf
+- Blocks: 0            Seconds: 0
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x20ba8E860ddd2084D07eF3b1777a635553063DC9
+   > block number:        453
+   > block timestamp:     1629017745
+   > account:             0x5f031D295Fc7406CB949806ba47E82f120f3B170
+   > balance:             96.37356112
+   > gas used:            662704 (0xa1cb0)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01325408 ETH
+MIGRATION_STATUS:{"status":"deployed","data":{"contract":{"contractName":"DiamondLoupeFacet","address":"0x20ba8E860ddd2084D07eF3b1777a635553063DC9"},"deployed":true,"receipt":{"transactionHash":"0x7fcb984cd91cf90b1a460b513b2e1a7c40dada34a859b434680183465f1a55cf","gasUsed":662704},"timestamp":1629017745,"gasPrice":"20","gas":"662704","from":"0x5f031D295Fc7406CB949806ba47E82f120f3B170","value":"0","cost":"0.01325408","balance":"96.37356112"}}
+MIGRATION_STATUS:{"status":"replacing","data":{"contractName":"OwnershipFacet","priorAddress":"0x631C6CA9D54e5a73af5F9ABc92011085978804C3"}}
+
+   Replacing 'OwnershipFacet'
+   --------------------------
+   > transaction hash:    0xbbc4293c9aa52ae2892c0c03e99bbedcdb89ffc51d0ba4c9404760598d6316b3
+- Blocks: 0            Seconds: 0
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xd67f125643247DB1312163E1F45CBb8279b81A2C
+   > block number:        454
+   > block timestamp:     1629017745
+   > account:             0x5f031D295Fc7406CB949806ba47E82f120f3B170
+   > balance:             96.36968846
+   > gas used:            193633 (0x2f461)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00387266 ETH
+MIGRATION_STATUS:{"status":"deployed","data":{"contract":{"contractName":"OwnershipFacet","address":"0xd67f125643247DB1312163E1F45CBb8279b81A2C"},"deployed":true,"receipt":{"transactionHash":"0xbbc4293c9aa52ae2892c0c03e99bbedcdb89ffc51d0ba4c9404760598d6316b3","gasUsed":193633},"timestamp":1629017745,"gasPrice":"20","gas":"193633","from":"0x5f031D295Fc7406CB949806ba47E82f120f3B170","value":"0","cost":"0.00387266","balance":"96.36968846"}}
+MIGRATION_STATUS:{"status":"replacing","data":{"contractName":"Diamond","priorAddress":"0x74eceAE2474B475bfAf5E092B09A074F01cEF888"}}
+
+   Replacing 'Diamond'
+   -------------------
+   > transaction hash:    0xce0eae0773a3f8748cfdba477191eddf8a96313bba9903a11ca9e95c9f800221
+- Blocks: 0            Seconds: 0
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x2ECFfd478E53a6B491F47b2BAF33EDCfeBbc7f73
+   > block number:        455
+   > block timestamp:     1629017748
+   > account:             0x5f031D295Fc7406CB949806ba47E82f120f3B170
+   > balance:             96.33582886
+   > gas used:            1692980 (0x19d534)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0338596 ETH
+MIGRATION_STATUS:{"status":"deployed","data":{"contract":{"contractName":"Diamond","address":"0x2ECFfd478E53a6B491F47b2BAF33EDCfeBbc7f73"},"deployed":true,"receipt":{"transactionHash":"0xce0eae0773a3f8748cfdba477191eddf8a96313bba9903a11ca9e95c9f800221","gasUsed":1692980},"timestamp":1629017748,"gasPrice":"20","gas":"1692980","from":"0x5f031D295Fc7406CB949806ba47E82f120f3B170","value":"0","cost":"0.0338596","balance":"96.33582886"}}
+
+- Saving migration to chain.
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.08480194 ETH
+
+MIGRATION_STATUS:{"status":"postMigrate","data":{"number":2,"cost":"0.08480194"}}
+
+MIGRATION_STATUS:{"status":"preMigrate","data":{"file":"3_others.js","number":3,"isFirst":false,"network":"development","networkId":"5777","blockLimit":"0x6691b7"}}
+
+3_others.js
+===========
+MIGRATION_STATUS:{"status":"replacing","data":{"contractName":"CrowdFundFacet","priorAddress":"0x431e2941c13135A4f4b4a85AF92647de621A2aBC"}}
+
+   Replacing 'CrowdFundFacet'
+   --------------------------
+   > transaction hash:    0x1c82e0c259afe59f52a5caca27a7306a185f690e10c03bb13681490a3c18ac78
+- Blocks: 0            Seconds: 0
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x42F2f29BEc050Fc48BAffe055fae80a60DC4fE0f
+   > block number:        457
+   > block timestamp:     1629017751
+   > account:             0x5f031D295Fc7406CB949806ba47E82f120f3B170
+   > balance:             96.32455388
+   > gas used:            536482 (0x82fa2)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01072964 ETH
+MIGRATION_STATUS:{"status":"deployed","data":{"contract":{"contractName":"CrowdFundFacet","address":"0x42F2f29BEc050Fc48BAffe055fae80a60DC4fE0f"},"deployed":true,"receipt":{"transactionHash":"0x1c82e0c259afe59f52a5caca27a7306a185f690e10c03bb13681490a3c18ac78","gasUsed":536482},"timestamp":1629017751,"gasPrice":"20","gas":"536482","from":"0x5f031D295Fc7406CB949806ba47E82f120f3B170","value":"0","cost":"0.01072964","balance":"96.32455388"}}
+
+- Saving migration to chain.
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.01072964 ETH
+
+MIGRATION_STATUS:{"status":"postMigrate","data":{"number":3,"cost":"0.01072964"}}
+
+MIGRATION_STATUS:{"status":"preMigrate","data":{"file":"4_simpleTest.js","number":4,"isFirst":false,"network":"development","networkId":"5777","blockLimit":"0x6691b7"}}
+
+4_simpleTest.js
+===============
+MIGRATION_STATUS:{"status":"replacing","data":{"contractName":"SimpleTestFacet","priorAddress":"0xca209ffb055b87ff72C71D5b6808D4e6c2DcDb00"}}
+
+   Replacing 'SimpleTestFacet'
+   ---------------------------
+   > transaction hash:    0xe220b1ea26232426fa0ccbcce047198e122a3b92238a39579c26a25eaac50a48
+- Blocks: 0            Seconds: 0
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xB9655E7beb302D811198746008749413bA74cd0D
+   > block number:        459
+   > block timestamp:     1629017752
+   > account:             0x5f031D295Fc7406CB949806ba47E82f120f3B170
+   > balance:             96.3158906
+   > gas used:            405897 (0x63189)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00811794 ETH
+MIGRATION_STATUS:{"status":"deployed","data":{"contract":{"contractName":"SimpleTestFacet","address":"0xB9655E7beb302D811198746008749413bA74cd0D"},"deployed":true,"receipt":{"transactionHash":"0xe220b1ea26232426fa0ccbcce047198e122a3b92238a39579c26a25eaac50a48","gasUsed":405897},"timestamp":1629017752,"gasPrice":"20","gas":"405897","from":"0x5f031D295Fc7406CB949806ba47E82f120f3B170","value":"0","cost":"0.00811794","balance":"96.3158906"}}
+
+- Saving migration to chain.
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00811794 ETH
+
+MIGRATION_STATUS:{"status":"postMigrate","data":{"number":4,"cost":"0.00811794"}}
+
+
+Summary
+=======
+> Total deployments:   9
+> Final cost:          0.10735688 ETH
+
+MIGRATION_STATUS:{"status":"lastMigrate","data":{"totalDeployments":"9","finalCost":"0.10735688"}}
+
+MIGRATION_STATUS:{"status":"postAllMigrations","data":{"dryRun":false,"error":null}}

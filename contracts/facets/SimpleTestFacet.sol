@@ -1,26 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.7.6;
 
-library LibA {
-  bytes32 constant ST_STORAGE_POSITION = keccak256("Simple.Test.storage");
-  struct TestData {
-    string name;
-    uint256 age;
-    uint256[] numbers;
-  }
-
-  function getData() internal pure returns (TestData storage td) {
-    bytes32 position = ST_STORAGE_POSITION;
-    assembly {
-      td.slot := position
-    }
-  }
-}
+import '../libraries/LibA.sol';
 
 contract SimpleTestFacet {
   event ContractCreated(string name);
   event NameSet(string name);
   event NumberAdded(uint256 number);
+  event AllNumbers(uint256[] numbers);
 
   function getName() public view returns (string memory name) {
     LibA.TestData storage fs = LibA.getData();
@@ -33,8 +20,9 @@ contract SimpleTestFacet {
     emit NameSet(fs.name);
   }
 
-  function getNumbers() public view returns (uint256[] memory) {
+  function getNumbers() public returns (uint256[] memory) {
     LibA.TestData storage fs = LibA.getData();
+    emit AllNumbers(fs.numbers);
     return fs.numbers;
   }
 
